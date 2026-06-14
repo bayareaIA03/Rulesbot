@@ -1,0 +1,26 @@
+Source URL: https://www.ratemyprofessors.com/professor/2114367
+Source Type: Rate My Professors
+Document Topic: Professor teaching style and student experience
+School: CSU East Bay
+Department: Computer Science
+Course: CS311, CS221
+
+Content:
+A former student described this professor when taking CS311 class, Teaches in detail with helpful drawings and gives thorough homework feedback, even on perfect scores.
+Requires some self-learning and covers Python, C++, and Java to build a solid foundation in concepts and implementation.
+
+A former student described this professor when taking CS211 class, Prof Ray was super flexible and
+understanding. I took the summer zoom course, he did not require attendance and lecture recordings
+were available to watch later which was great. Prof. was forgiving of mistakes and made it easy to do
+well with flexible hw deadlines. There were only 5 assignments and two tests tho, so every score weighed heavily.
+
+A former student described this professor when taking CS211 class, Lecture heavy. Be attentive
+
+A former student described this professor when taking CS311 class, He does not reply to emails.
+He does not give feedback on the assignments. His exams were multiple choice but tricky.
+His lectures were ok but it is very hard to accessible outside of zoom lecture :((((
+
+Notes:
+This document is useful for questions about teaching style,
+lecture clarity, workload, exams, grading, homework, projects,
+and whether students recommend taking this professor.

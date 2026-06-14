@@ -1,0 +1,26 @@
+Source URL: https://www.quora.com/Why-shouldn%E2%80%99t-I-go-to-the-CSU-at-East-Bay
+Source Type: Quora
+Document Topic: General concerns and student opinions about attending CSU East Bay
+School: CSU East Bay
+Department: General university context
+
+Content:
+Quora commenters describe CSU East Bay as a diverse, practical, and accessible
+university where many students are hardworking, financially responsible, first-generation,
+international, or balancing school with jobs and family responsibilities. One adjunct professor
+explains that some students may take longer than four years to graduate because of real-life pressures such as work,
+financial issues, family emergencies, and caregiving responsibilities.
+
+Former students describe positive experiences with campus involvement, professor connections,
+and academic support. One commenter says their best education came from CSU East Bay, even after earning
+degrees from other universities.
+
+A former Computer Science student says they completed CS coursework and an M.S.
+in Computer Science at CSU East Bay and were pleased with the faculty, classes, evening scheduling,
+and program quality. They mention that the program may not have the prestige of schools like MIT,
+but they felt well prepared professionally and believed employers in Silicon Valley generally recognized the quality of CSUEB graduates.
+
+Notes:
+This document is useful for questions about common concerns students may have about CSU East Bay,
+including reputation, campus experience, student life, career support, professor quality, and whether the school
+is a good fit. This is a general background source, not a direct Computer Science professor review.

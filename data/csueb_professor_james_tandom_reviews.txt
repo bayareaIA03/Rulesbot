@@ -1,0 +1,20 @@
+Source URL: https://www.ratemyprofessors.com/professor/2081984
+Source Type: Rate My Professors
+Document Topic: Professor teaching style, workload, grading, and student experience
+School: CSU East Bay
+Department: Computer Science
+Course: CS221, CS321
+
+Content:
+
+Review 1:
+A former student described this professor in CS321 as a bad experience. The student said the class was online and that the professor initially described the exams one way, but later changed the format to an oral presentation. The student said homework made up most of the points, lectures were often longer than an hour, and the lecture material did not help much with the homework.
+
+Review 2:
+A former student described this professor in CS221 as a good teacher, but said the grading was frustrating. The student said many classmates had high B grades on Canvas, but received lower final grades because Canvas was not updated accurately during the semester.
+
+Review 3:
+A former student described this professor in CS221 as strict about late work, with automatic zeros unless there was a legitimate reason. The student said the professor does not record online lectures, but explains the material well and is willing to explain concepts multiple times. The student also said the homework can be time-consuming because the programming assignments are tedious and lengthy.
+
+Notes:
+This document is useful for questions about teaching style, lecture clarity, workload, exams, grading, homework, online lectures, and whether students recommend taking this professor.
