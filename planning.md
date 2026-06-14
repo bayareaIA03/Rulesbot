@@ -94,14 +94,15 @@ After implementing retrieval, I will test these queries and record what comes ba
 
 | Query                                                              | Top result source                    | Does it make sense?                  |
 | ------------------------------------------------------------------ | ------------------------------------ | ------------------------------------ |
-| What do students say about Professor Christopher Smith’s workload? | To be filled after retrieval testing | To be filled after retrieval testing |
+| What do students say about Professor Christopher Smith’s workload? | Yes. The top results came from the correct Christopher Smith CS471 review file. The retrieved chunks mention that students describe the course as useful but very time consuming and that it may not be a good choice during a busy semester. |
 | What do students say about Professor Indira’s lecture style?       | To be filled after retrieval testing | To be filled after retrieval testing |
-| What do students say about grading in CS221?                       | To be filled after retrieval testing | To be filled after retrieval testing |
+| What do students say about grading in CS221?                       | csueb_professor_james_tandom_reviews.txt | Yes. The top result includes the CS221 review where a student said the professor was a good teacher, but grading was frustrating because Canvas was not updated accurately and students received lower final grades than expected. |
 | Is CSU East Bay’s CS program respected by students?                | To be filled after retrieval testing | To be filled after retrieval testing |
-| Which professor gives clear exam preparation advice?               | To be filled after retrieval testing | To be filled after retrieval testing |
+| Which professor gives clear exam preparation advice?               | Yes. The top results came from the Hasan Tahir review file. The retrieved chunks mention that he explains what students need to know for quizzes and tests, teaches clearly, shows students how to solve problems, and supports students through office hours.
 
 **Anything surprising?**
-To be filled after retrieval testing. I expect some results may be too general if the query asks about CSU East Bay overall instead of a specific professor or course.
+One thing I noticed is that the top result was relevant, but some lower-ranked results were less related to the query. This makes sense because I retrieved the top 5 chunks, and after the first few strong matches, the remaining chunks can become more loosely related. I would keep `k=5` for generation because it gives the LLM enough context, but I will mainly judge retrieval quality based on whether the top 1 to 2 chunks are clearly relevant.
+
 
 ---
 
@@ -110,9 +111,9 @@ To be filled after retrieval testing. I expect some results may be too general i
 After implementing generation, I will test 2 to 3 questions and assess the answers:
 
 | Query                                                                    | Answer accurate?                      | Properly grounded?                    | Cited the right source?               |
-| ------------------------------------------------------------------------ | ------------------------------------- | ------------------------------------- | ------------------------------------- |
+|--------------------------------------------------------------------------| ------------------------------------- | ------------------------------------- | ------------------------------------- |
 | What do students say about Professor Christopher Smith’s CS471 workload? | To be filled after generation testing | To be filled after generation testing | To be filled after generation testing |
-| What do students say about Professor Indira’s lecture style?             | To be filled after generation testing | To be filled after generation testing | To be filled after generation testing |
+| Which professor gives clear exam preparation advice?                     | To be filled after generation testing | To be filled after generation testing | To be filled after generation testing |
 | What do students say about CSU East Bay’s CS program quality?            | To be filled after generation testing | To be filled after generation testing | To be filled after generation testing |
 
 **What would you change about the prompt to improve grounding?**
