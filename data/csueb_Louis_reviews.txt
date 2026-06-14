@@ -1,0 +1,26 @@
+Source URL: https://www.ratemyprofessors.com/professor/180115
+Source Type: Rate My Professors
+Document Topic: Professor teaching style, lab instruction, workload, participation, and student experience
+School: CSU East Bay
+Department: Physics / Astronomy
+Course: PHYS125, PHYS138, ASTR139
+
+Content:
+
+Review 1:
+A student described this professor as one of the best lab instructors they had for PHYS125. The student said he may seem harsh when students are disrespectful or not paying attention, but he appreciates participation and effort. The student also said the lab lectures are clear, lab reports are manageable, students get three days to submit them, and grading is generally lenient with only minor deductions.
+
+Review 2:
+A student said this professor was funny, caring, and helpful in PHYS125 lecture and lab. The student mentioned that he helps with XL and labs, drops the lowest lab grade, and is approachable during office hours. The student also said he does not allow lab makeups, but the labs are manageable within the lab period, and exams are fairly easy.
+
+Review 3:
+A student described ASTR139 as a synchronous online class with one long weekly class session. The student said the class can be manageable for an A if students are willing to sit through the weekly session. The course includes breakout rooms, group labs, and participation-based work, but the class can feel long and frustrating.
+
+Review 4:
+A student said ASTR139 included weekly lab assignments that were not difficult but felt like busy work. The student said attendance was not mandatory, but students often needed help with the lab assignments. The student also described the professor as condescending and passive aggressive when students asked for help.
+
+Review 5:
+A student described PHYS138 negatively and said the professor could be condescending, rude, and humiliating when students answered questions incorrectly. The student said the professor sometimes asked questions ahead of the current lecture material and explained concepts in a way that felt insulting.
+
+Notes:
+This document is useful for questions about lab instruction, lecture clarity, workload, grading leniency, participation, office hours, group labs, online class structure, and mixed student experiences. Since this source is for Physics and Astronomy courses, it should be used as general professor-quality context rather than as a main Computer Science professor review.

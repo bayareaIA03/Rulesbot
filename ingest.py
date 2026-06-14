@@ -1,53 +1,68 @@
 import os
-from config import DOCS_PATH
+import json
+import re
+
+DOCS_PATH = "data"
+OUTPUT_FILE = "chunks.json"
+
+
+def clean_text(text):
+    """
+    Clean the raw professor review text before chunking.
+    """
+    text = re.sub(r"\s+", " ", text)
+    text = text.replace("&amp;", "&")
+    text = text.replace("&nbsp;", " ")
+    return text.strip()
 
 
 def load_documents():
-    """Load all .txt rule documents from the docs folder."""
+    """
+    Load all .txt professor review documents from the data folder.
+    """
     documents = []
+
+    if not os.path.exists(DOCS_PATH):
+        print(f"ERROR: Folder '{DOCS_PATH}' not found.")
+        return documents
+
     for filename in sorted(os.listdir(DOCS_PATH)):
         if filename.endswith(".txt"):
             filepath = os.path.join(DOCS_PATH, filename)
+
             with open(filepath, "r", encoding="utf-8") as f:
                 text = f.read()
-            game_name = filename.replace(".txt", "").replace("_", " ").title()
+
+            source_name = filename.replace(".txt", "").replace("_", " ").title()
+
             documents.append({
-                "game": game_name,
+                "source_name": source_name,
                 "filename": filename,
-                "text": text,
+                "text": clean_text(text),
             })
-    print(f"Loaded {len(documents)} rule document(s): {[d['game'] for d in documents]}")
+
+    print(f"Loaded {len(documents)} document(s): {[d['filename'] for d in documents]}")
     return documents
 
 
-def chunk_document(text, game_name):
+def chunk_document(text, source_name, filename):
     """
-    Split a rule document into chunks ready for embedding.
+    Split one professor review document into chunks ready for embedding.
 
-    This function is already implemented — read through it and the inline
-    comments before moving on. The decisions made here directly shape what
-    retrieval returns in Milestones 2 and 3, so it's worth understanding
-    before you build on top of it.
+    Strategy:
+    - chunk_size = 700 characters
+    - overlap = 100 characters
+    - min_length = 50 characters
 
-    Strategy: character-based sliding window with overlap.
-      - chunk_size = 300 characters: long enough to carry the semantic
-        meaning of a single rule, short enough to return targeted results
-      - overlap = 50 characters: duplicates a small window of text at each
-        boundary so a rule that spans two chunks can still be retrieved intact
-      - min_length = 50 characters: filters out whitespace artifacts and
-        very short fragments that add noise without useful semantic content
-
-    Returns a list of dicts, each with:
-      - "text"     : the chunk text (str)
-      - "game"     : the game name, e.g. "Catan" (str)
-      - "chunk_id" : a unique identifier, e.g. "catan_0", "catan_1" (str)
+    This fits professor review text because reviews are usually short,
+    opinion-based, and focused on teaching style, workload, grading, or class experience.
     """
-    chunk_size = 300
-    overlap = 50
+    chunk_size = 500
+    overlap = 100
     min_length = 50
 
     chunks = []
-    prefix = game_name.lower().replace(" ", "_")
+    prefix = filename.replace(".txt", "")
     counter = 0
 
     start = 0
@@ -58,13 +73,50 @@ def chunk_document(text, game_name):
         if len(chunk_text) >= min_length:
             chunks.append({
                 "text": chunk_text,
-                "game": game_name,
+                "source_name": source_name,
+                "filename": filename,
                 "chunk_id": f"{prefix}_{counter}",
+                "chunk_index": counter,
             })
             counter += 1
 
-        # Advance by (chunk_size - overlap) so the next chunk shares
-        # `overlap` characters with the tail of this one.
         start += chunk_size - overlap
 
     return chunks
+
+
+def main():
+    print("Starting ingestion...")
+
+    documents = load_documents()
+
+    if not documents:
+        print("No documents found. Make sure your .txt files are inside the data folder.")
+        return
+
+    all_chunks = []
+
+    for document in documents:
+        chunks = chunk_document(
+            document["text"],
+            document["source_name"],
+            document["filename"]
+        )
+        all_chunks.extend(chunks)
+
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(all_chunks, f, indent=2)
+
+    print(f"\nCreated {len(all_chunks)} chunk(s)")
+    print(f"Saved chunks to {OUTPUT_FILE}")
+
+    print("\nSample chunks:")
+    for chunk in all_chunks[:5]:
+        print("\n---")
+        print("Source:", chunk["filename"])
+        print("Chunk ID:", chunk["chunk_id"])
+        print(chunk["text"])
+
+
+if __name__ == "__main__":
+    main()
