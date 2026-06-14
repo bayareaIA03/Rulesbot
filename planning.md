@@ -110,11 +110,11 @@ One thing I noticed is that the top result was relevant, but some lower-ranked r
 
 After implementing generation, I will test 2 to 3 questions and assess the answers:
 
-| Query                                                                    | Answer accurate?                      | Properly grounded?                    | Cited the right source?               |
-|--------------------------------------------------------------------------| ------------------------------------- | ------------------------------------- | ------------------------------------- |
-| What do students say about Professor Christopher Smith’s CS471 workload? | To be filled after generation testing | To be filled after generation testing | To be filled after generation testing |
-| Which professor gives clear exam preparation advice?                     | To be filled after generation testing | To be filled after generation testing | To be filled after generation testing |
-| What do students say about CSU East Bay’s CS program quality?            | To be filled after generation testing | To be filled after generation testing | To be filled after generation testing |
+| Query                                                                    | Answer accurate? | Properly grounded? | Cited the right source? |
+|--------------------------------------------------------------------------|------------------|--------------------|-------------------------|
+| What do students say about Professor Christopher Smith’s CS471 workload? | Yes              | Yes                | Yes                     |
+| Which professor gives clear exam preparation advice?                     | Yes              | Yes                | Yes                     |
+| What do students say about CSU East Bay’s CS program quality?            | Yes              | Yes                | Yes                     |
 
 **What would you change about the prompt to improve grounding?**
 If the model gives answers that are too broad or sound like general knowledge, I will make the prompt stricter by telling it to answer only from retrieved chunks and to say, “I do not have enough information from the provided documents,” when the answer is not supported. I will also make sure source names are added programmatically so citations do not depend only on the LLM.
